@@ -116,7 +116,7 @@ dataGra.pop();
     let midColor = lerpColor(stColor1, edColor1, o / 10);
 
     dataGra.push();
-    dataGra.translate(0, o * height / 15 + 340);
+    dataGra.translate(0, o * height / 15 + 400);
     dataGra.fill(midColor);
     dataGra.beginShape();
     dataGra.vertex(0, 350);
