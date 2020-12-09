@@ -24,7 +24,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1369,681);
+  createCanvas(windowWidth, windowHeight);
 
   //set up camera
   video = createCapture(VIDEO);
@@ -78,10 +78,10 @@ function draw() {
   
   // draw moon
   let moonX = map ( faceX, 0, width/2, 450,350);
-  moon(moonX,200,dataGra);
+  moon(moonX,220,dataGra);
   // draw cloud besides moon
   let cloudMX = map (faceX,0,width/2, 400,300)
-  dataGra.image(cloudM,cloudMX,220,108,52);
+  dataGra.image(cloudM,cloudMX,240,108,52);
   
   // draw interaction hint
   dataGra.push();
@@ -97,10 +97,10 @@ dataGra.pop();
 }
     // draw right side clouds
   let cloud2Y = map (faceX,width/2,width, 70,110);
-  dataGra.image(cloud2, width-400,cloud2Y, 300,240);
+  dataGra.image(cloud2, width-400,cloud2Y, 320,260);
   
    let cloud1Y = map (faceX,width/2,width, -100,40);
-  dataGra.image(cloud1, width-600,cloud1Y, 330,264);
+  dataGra.image(cloud1, width-600,cloud1Y, 350,284);
   dataGra.pop();
 
     //draw waves
@@ -116,7 +116,7 @@ dataGra.pop();
     let midColor = lerpColor(stColor1, edColor1, o / 10);
 
     dataGra.push();
-    dataGra.translate(0, o * height / 15 + 400);
+    dataGra.translate(0, o * height / 15 + 340);
     dataGra.fill(midColor);
     dataGra.beginShape();
     dataGra.vertex(0, 350);
@@ -188,7 +188,7 @@ dataGra.push();
 function boat(x, y, p) {
   p.push();
   p.translate(x, y);
-  p.scale(0.5 * pow(y / 700, 2));
+  p.scale(0.3 * pow(y / 700, 2));
   // p.rotate(PI / 10);
   p.push();
   p.noStroke();
