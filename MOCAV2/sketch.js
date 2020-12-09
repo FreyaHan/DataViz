@@ -77,10 +77,10 @@ function draw() {
   // dataGra.drawingContext.shadowOffsetY = -5;
   
   // draw moon
-  let moonX = map ( faceX, 0, width/2, 450,350);
+  let moonX = map ( faceX, 0, width/2, 480,350);
   moon(moonX,220,dataGra);
   // draw cloud besides moon
-  let cloudMX = map (faceX,0,width/2, 400,300)
+  let cloudMX = map (faceX,0,width/2, 430,300)
   dataGra.image(cloudM,cloudMX,240,108,52);
   
   // draw interaction hint
@@ -97,10 +97,10 @@ dataGra.pop();
 }
     // draw right side clouds
   let cloud2Y = map (faceX,width/2,width, 70,110);
-  dataGra.image(cloud2, width-400,cloud2Y, 320,260);
+  dataGra.image(cloud2, width-380,cloud2Y, 320,260);
   
    let cloud1Y = map (faceX,width/2,width, -100,40);
-  dataGra.image(cloud1, width-600,cloud1Y, 350,284);
+  dataGra.image(cloud1, width-580,cloud1Y, 320,264);
   dataGra.pop();
 
     //draw waves
@@ -188,7 +188,7 @@ dataGra.push();
 function boat(x, y, p) {
   p.push();
   p.translate(x, y);
-  p.scale(0.3 * pow(y / 700, 2));
+  p.scale(0.4 * pow(y / 700, 2));
   // p.rotate(PI / 10);
   p.push();
   p.noStroke();
@@ -209,7 +209,7 @@ function boat(x, y, p) {
 function boatf(x, y, p) {
   p.push();
   p.translate(x, y);
-  p.scale(0.3 * pow(y / 700, 2));
+  p.scale(0.4 * pow(y / 700, 2));
   p.push();
   p.noStroke();
   p.fill(249, 199, 79);
