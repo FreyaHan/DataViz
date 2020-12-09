@@ -24,7 +24,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1361, 677);
+  createCanvas(1439, 702);
 
   //set up camera
   video = createCapture(VIDEO);
